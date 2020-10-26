@@ -1,0 +1,1 @@
+This was an intro project to learn the basics of HTML, CSS, and Dev Tools in order to build a visual clone of the google homepage.

@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<link href="https://www.fonts.com/font/monotype/arial?QueryFontType=Web&src=GoogleWebFonts" rel=stylesheet type="text/css">
+<style>
+
+* {
+  /* border: 1px solid red; */
+  font-family: Arial, sans-serif;
+}
+
+a {
+    color: black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button:hover {
+    border: 1px solid rgb(73, 73, 73);
+}
+
+#sign-in:hover {
+    border: 1px solid rgb(73, 73, 73);
+}
+
+.box-cont:hover {
+    opacity:1;
+}
+
+input:focus {
+    outline: none;
+}
+
+.view-port { 
+position: absolute;
+display: block;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+min-height: 500px;
+}
+
+.bottom-bar {
+    display: flex;
+    position: absolute;
+    font-size: 10pt;
+    font-family: Arial, sans-serif;
+    bottom: 0; 
+    left:0;
+    height: 41px;
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    color: #5f6368;
+    }
+
+.left-bottom {
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 10px;
+    left: 0;
+    position: absolute;
+    padding-left: 10px;
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+.right-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 10px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    padding-right: 10px;
+    width: auto;
+}
+
+.right-bottom * {
+    padding: 0 10px 0 10px;
+    color: #5f6368;
+}
+
+.left-bottom * {
+    padding: 0 10px 0 10px;
+    color: #5f6368;
+}
+
+
+.top-bar {
+    display: flex;
+    position: relative;
+    font-size: 10pt;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 41px;
+}
+
+.left-top {
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 0 0 20px;
+    align-items: center;
+}
+
+.right-top {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 10px;
+    right: 0;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 20px 0 0;
+}
+
+.center-screen {
+    
+    position: relative;
+    margin: 150px auto auto auto;
+    width: auto;
+    text-align: center;
+}
+
+.search-input {
+    position: relative;
+    height: 65px;
+    width: 50%;
+    max-width: 650px;
+    /*border: 1px solid black;*/
+    margin: 0 auto 0 auto;
+}
+
+.mag-glass {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    height:20px;
+    width: 20px;
+    background-image: url(https://ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+    background-size: 528px 68px;
+    background-position: -250px -35px;
+    opacity: .4;
+    z-index: 2;
+}
+
+#search-box {
+    
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    height: 44px;
+    width: 90%;
+}
+
+#search-field {
+    position: absolute;
+    height: 90%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: none;
+    font-size: 16px; 
+}
+
+.search-button {
+    background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    padding: 0 16px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    margin: 20px 5px 5px 0px;
+}
+
+
+#sign-in {
+    border: 1px solid #4285f4;
+    font-weight: bold;
+    outline: none;
+    background: #4285f4;
+    background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+    color: white;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    height: 32px;
+    min-width: 54px;
+    width: 70px;
+    text-align: center;
+}
+
+.box-cont {
+    height:30px;
+    width: 30px;
+    background-image: url(https://ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+    background-size: 528px 68px;
+    background-position: -132px -38px;
+    opacity: .55;
+}
+
+</style>
+
+<body>
+<div class="view-port">
+
+<div class="top-bar">
+
+    <div class="left-top">
+    <a href="">About</a><a href="">Store</a>
+    </div>
+
+    <div class="right-top">
+    <a href="">Gmail</a><a href="">Images</a><div class="box-cont"></div><button id="sign-in">Sign In</button>
+    </div>
+
+</div>
+
+<div class="center-screen">
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+
+<div class="search-input"><div class="mag-glass"></div><div id="search-box"><input id="search-field" type="text"></div></div>
+
+<button class="search-button">Google Search</button>
+<button class="search-button">I'm Feeling Lucky</button>
+</div>
+
+<div class="bottom-bar">
+    <div class="left-bottom"><a href="">Advertising</a><a href="">Business</a><a href="">How Search Works</a></div>
+    <div class="right-bottom"><a href="">Privacy</a><a href="">Terms</a><a href="">Settings</a></div>
+</div>
+
+</div>
+</body>
+</html>
+
